@@ -1,0 +1,14 @@
+# Minimal Mistakes 테마의 Custom Sidebar Navigation 정의
+
+members_nav:
+  - title: "구성원" # 최상위 제목 (Members)
+    children:
+      - title: "교수진 (Professors)"
+        children:
+          # 교수 이름으로 개별 페이지 구성
+          - title: "박현우 교수" 
+            url: /members/prof-park/
+      - title: "재학생 (Students)"
+        url: /members/students/
+      - title: "졸업생 (Alumni)"
+        url: /members/alumni/

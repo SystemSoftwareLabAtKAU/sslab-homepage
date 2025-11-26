@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{% if page.header %}
+  {% include page__header.html %}
+{% endif %}
+
+{% if page.sidebar.nav %}
+  <div id="main" role="main">
+    {% include sidebar.html %}
+    <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+      <!-- 이 부분: include_cached page__taxonomy.html 삭제 -->
+      <header class="page__header">
+        <h1 id="page-title" class="page__title" itemprop="headline">{{ page.title | default: "Untitled" }}</h1>
+      </header>
+      <!-- 이 부분: include_cached page__title.html 삭제 -->
+      <section class="page__content" itemprop="text">
+        {{ content }}
+      </section>
+      {% include link-buttons.html %}
+      {% include page__footer.html %}
+    </article>
+  </div>
+{% else %}
+  <div id="main" role="main">
+    <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+      <!-- 이 부분: include_cached page__taxonomy.html 삭제 -->
+      <header class="page__header">
+        <h1 id="page-title" class="page__title" itemprop="headline">{{ page.title | default: "Untitled" }}</h1>
+      </header>
+      <!-- 이 부분: include_cached page__title.html 삭제 -->
+      <section class="page__content" itemprop="text">
+        {{ content }}
+      </section>
+      {% include link-buttons.html %}
+      {% include page__footer.html %}
+    </article>
+  </div>
+{% endif %}

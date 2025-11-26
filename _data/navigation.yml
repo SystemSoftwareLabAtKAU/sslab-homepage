@@ -1,0 +1,11 @@
+# 메인 내비게이션 (상단 메뉴) 설정
+
+main:
+  - title: "SSLab"      # 메인 페이지 (연구실 소개)
+    url: /
+  - title: "Members"    # 구성원 소개 페이지 (추후 생성 필요)
+    url: /members/
+  - title: "Research"   # 상세 연구 분야 페이지 (추후 생성 필요)
+    url: /research/
+      #- title: "Projects"   # 연구 프로젝트 목록 페이지 (추후 생성 필요)
+      #url: /projects/

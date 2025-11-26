@@ -1,0 +1,35 @@
+<!-- 상단 메뉴바 배경색 및 글자색 강제 오버라이드 -->
+    <style>
+      /* 1. 메뉴바 배경색 적용 (연한 카키색) */
+      .masthead {
+        background-color: #9FA0A0 !important; 
+      }
+      
+      /* 2. 메뉴바 내부 링크 및 타이틀 색상 조정 및 흰색 배경 제거 */
+      .masthead a,
+      .site-title a {
+        color: #1f2937 !important; /* 진한 회색 (거의 검은색) */
+        text-shadow: none !important; /* 텍스트 주변 그림자 제거 */
+        background: transparent !important; /* 링크 텍스트 자체의 배경을 투명하게 만듭니다. */
+        border-radius: 0 !important; /* 혹시 모를 둥근 모서리로 인한 잔여 흰색 제거 */
+        padding: 0 0.5em !important; /* 패딩을 줄여 흰색 공간 최소화 */
+      }
+      
+      /* 3. 제목, 메뉴, 리스트 등 모든 상위 및 중위 컨테이너를 투명하게 처리 */
+      .masthead .site-nav,
+      .site-title,
+      .masthead__inner-wrap,
+      .masthead .site-nav ul,
+      .masthead .site-nav li {
+        background-color: transparent !important;
+        box-shadow: none !important; /* 그림자 제거 */
+        border: none !important; /* 테두리 제거 */
+      }
+
+      /* 4. 마우스 오버(Hover) 시의 링크 색상 및 배경색 조정 */
+      .masthead a:hover,
+      .site-title a:hover {
+        color: #000000 !important;
+        background-color: transparent !important; /* 호버 시 배경색이 흰색으로 바뀌는 것 방지 */
+      }
+    </style>
